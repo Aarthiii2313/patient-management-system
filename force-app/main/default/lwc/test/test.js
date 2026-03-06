@@ -4,7 +4,7 @@ import getDoctors from '@salesforce/apex/DoctorController.getDoctors';
 import getPatients from '@salesforce/apex/AppointmentController.getPatients';
 import saveAppointment from '@salesforce/apex/AppointmentController.saveAppointment';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-
+import DOCTOR_IMAGES from '@salesforce/resourceUrl/doctor_images';
 
 export default class Test extends NavigationMixin(LightningElement) {
 
