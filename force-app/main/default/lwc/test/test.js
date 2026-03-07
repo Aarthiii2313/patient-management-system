@@ -8,23 +8,9 @@ import DOCTOR_IMAGES from '@salesforce/resourceUrl/doctor_images';
 
 export default class Test extends NavigationMixin(LightningElement) {
 
-loadDoctors() {
-    getDoctors()
-        .then(result => {
-
-            this.doctors = result.map(doc => {
-                return {
-                    ...doc,
-                    Doc_URL__c: `${DOCTOR_IMAGES}/${doc.Name.toLowerCase()}.png`
-                };
-            });
-
-        })
-        .catch(error => console.error(error));
-}
-
      doctors = [];
      patients = [];
+     appointments = [];
 
 
      selectedDoctorId;
@@ -74,13 +60,27 @@ loadDoctors() {
     }
 
 
-    loadDoctors() {
-        getDoctors()
-            .then(result => {
-                this.doctors = result;
-            })
-            .catch(error => console.error(error));
-    }
+   loadDoctors() {
+    getDoctors()
+        .then(result => {
+            this.doctors = result.map(doc => {
+                return {
+                    ...doc,
+                    imageUrl: doc.Doc_URL__c 
+                        ? doc.Doc_URL__c 
+                        : `${DOCTOR_IMAGES}/${doc.Name.toLowerCase()}.png`
+                };
+            });
+        })
+        .catch(error => console.error(error));
+}
+
+get displayedImage() {
+    return this.selectedImage 
+        ? this.selectedImage 
+        : `${DOCTOR_IMAGES}/default.png`;
+}
+
 
 
     loadPatients() {
@@ -105,7 +105,7 @@ loadDoctors() {
     this.selectedDoctor = doc.Name;
     this.selectedSpec = doc.Specialization__c;
     this.selectedExperience = doc.Experience_Years__c;
-    this.selectedImage = doctor.Doc_URL__c;
+    this.selectedImage = doc.imageUrl;
     this.selectedShift = doc.Shift__c;
 
     this.showPatient = false;
@@ -163,9 +163,6 @@ handleAddPatient() {
 }
 
    
-   /* handlePhone(event) {
-        this.phone = event.target.value;
-    }*/
 
 
 handleDateChange(event) {

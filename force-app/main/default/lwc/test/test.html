@@ -9,7 +9,7 @@
                        data-id={doc.Id}
                        onclick={selectDoctor}>
 
-                    <img src={doctor.Doc_URL__c} alt="Doctor-img"/>
+                    <img src={doc.imageUrl} alt="doctor-img"/>
 
                         <h4>{doc.Name}</h4>
                         <p>{doc.Specialization__c}</p>
@@ -23,7 +23,7 @@
             <lightning-button
                 label="Add Patient"
                 variant="brand"
-                onclick={handleAddPatient}>
+                onclick={handleAddPatient}/>
             </lightning-button>
 
             <!-- Generate Bill button next to Add Patient -->
@@ -39,7 +39,7 @@
             <!-- LEFT : SELECTED DOCTOR -->
             <div class="doctor-card">
                 <template if:true={selectedImage}>
-                    <img src={selectedImage} alt="Doctor Image" />
+                     <img src={displayedImage} alt="Doctor Image" />
                 </template>
 
                 <h3>{selectedDoctor}</h3>
