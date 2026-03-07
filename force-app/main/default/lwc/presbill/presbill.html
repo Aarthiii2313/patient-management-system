@@ -1,9 +1,21 @@
 <template>
     <div class="main-container">
 
+        <!-- ================= FLOATING MEDICAL BACKGROUND ================= -->
+        <div class="medical-bg">
+            <div class="molecule mol-1"></div>
+            <div class="molecule mol-2"></div>
+            <div class="molecule mol-3"></div>
+            <div class="cross cross-1"></div>
+            <div class="cross cross-2"></div>
+            <div class="cross cross-3"></div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
 
         <lightning-card title="🏥 Hospital Billing" class="main-card">
-            <div class="slds-p-around_medium">
+            <div class="custom-p-around">
 
 
                 <!-- Appointment -->
@@ -35,7 +47,7 @@
 
 
                     <template for:each={prescriptions} for:item="item" for:index="index">
-                        <div key={item.id} class="slds-grid slds-gutters slds-m-bottom_small">
+                        <div key={item.id} class="slds-grid custom-grid slds-gutters slds-m-bottom_small">
 
 
                             <div class="slds-col">

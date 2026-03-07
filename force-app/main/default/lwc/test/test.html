@@ -1,6 +1,20 @@
 <template>
     <div class="page-container">
 
+        <!-- ================= FLOATING MEDICAL BACKGROUND ================= -->
+        <div class="medical-bg">
+            <div class="molecule mol-1"></div>
+            <div class="molecule mol-2"></div>
+            <div class="molecule mol-3"></div>
+            <div class="cross cross-1"></div>
+            <div class="cross cross-2"></div>
+            <div class="cross cross-3"></div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+        </div>
+
+        <div class="content-wrapper">
         <!-- ================= DOCTOR LIST ================= -->
         <div class="doctor-list">
             <template for:each={doctors} for:item="doc">
@@ -157,5 +171,6 @@
 
             </div>
         </div>
+        </div> <!-- Close content-wrapper -->
     </div>
 </template>

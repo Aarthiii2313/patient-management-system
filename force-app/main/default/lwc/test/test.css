@@ -1,9 +1,24 @@
 /* ================= PAGE ================= */
 .page-container {
     padding: 30px;
-    background: #f8fafc;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #0ea5e9, #38bdf8);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
     font-family: 'Inter', "Salesforce Sans", Arial, sans-serif;
     min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ================= ADD Patient BUTTONS ================= */
@@ -282,4 +297,68 @@ select:disabled {
         position: static;
         margin-bottom: 20px;
     }
+}
+
+/* ================= FLOATING MEDICAL BACKGROUND ================= */
+.medical-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.molecule, .cross, .bubble {
+    position: absolute;
+    bottom: -200px;
+    opacity: 0;
+}
+
+/* Hexagon (Chemical Structure) */
+.molecule {
+    background: rgba(255, 255, 255, 0.15);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: floatShape linear infinite;
+}
+
+/* Medical Cross */
+.cross {
+    background: rgba(255, 255, 255, 0.25);
+    clip-path: polygon(35% 0, 65% 0, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0 65%, 0 35%, 35% 35%);
+    animation: floatRotate linear infinite;
+}
+
+/* Glowing Bubble/Cell */
+.bubble {
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    animation: floatShape linear infinite;
+}
+
+/* Shapes Positioning & Pacing (SPED UP) */
+.mol-1 { width: 140px; height: 154px; left: 10%; animation-duration: 15s; animation-delay: 0s; }
+.mol-2 { width: 90px; height: 99px; left: 80%; animation-duration: 12s; animation-delay: 2s; }
+.mol-3 { width: 180px; height: 198px; left: 45%; animation-duration: 18s; animation-delay: 5s; }
+
+.cross-1 { width: 100px; height: 100px; left: 25%; animation-duration: 16s; animation-delay: 1s; }
+.cross-2 { width: 70px; height: 70px; left: 70%; animation-duration: 10s; animation-delay: 4s; }
+.cross-3 { width: 120px; height: 120px; left: 90%; animation-duration: 20s; animation-delay: 7s; }
+
+.bubble-1 { width: 280px; height: 280px; left: 15%; animation-duration: 18s; animation-delay: 3s; }
+.bubble-2 { width: 180px; height: 180px; left: 60%; animation-duration: 14s; animation-delay: 0s; }
+.bubble-3 { width: 350px; height: 350px; left: 85%; animation-duration: 22s; animation-delay: 6s; }
+
+@keyframes floatShape {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes floatRotate {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(-360deg); opacity: 0; }
 }
