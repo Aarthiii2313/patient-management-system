@@ -30,16 +30,16 @@ Lightning Web Components (LWC) and Apex.
 
 ## Project Screenshots
 
-![Home](screenshots/Homescreenshots.png)
+![Home](screenshots/home.png)
 
-![Booking](screenshots/Bookingscreenshot1.png)
+![Booking](screenshots/booking1.png)
 
-![Booking2](screenshots/Bookingscreenshot2.png)
+![Booking2](screenshots/booking2.png)
 
-![Appointment](screenshots/Appointmentsavescreenshot.png)
+![Appointment](screenshots/appointment.png)
 
-![Prescription](screenshots/prescriptionscreenshot.png)
+![Prescription](screenshots/prescription.png)
 
-![Billing](screenshots/Billingscreenshot.png)
+![Billing](screenshots/billing.png)
 
-![Save](screenshots/savedscreenshot.png)
+![Save](screenshots/save.png)
