@@ -28,6 +28,13 @@ Lightning Web Components (LWC) and Apex.
 - Email notifications
 - AI disease prediction
 
+
+## Project Documentation
+
+Detailed project explanation:
+
+[Project Report](documentation/project-report.md)
+
 ## Project Screenshots
 
 | Home | Booking | Booking2 |
