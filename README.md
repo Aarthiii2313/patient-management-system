@@ -55,4 +55,4 @@ Detailed project explanation:
 
 This video demonstrates the working flow of the Patient Management System including appointment booking, prescription management, and billing generation.
 
-▶️ [Watch Demo](Video/Demo.mp4)
+▶️ [Watch Demo](Video/project-demo.mp4)
