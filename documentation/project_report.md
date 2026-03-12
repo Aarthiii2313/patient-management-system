@@ -53,7 +53,7 @@ Consists of Salesforce custom objects for structured data storage:
 
 ### 4.4 Architecture Diagram
 ## System Architecture
-![System Architecture](documentation/system-architecture.png)
+![System Architecture](documentation/architecture_diagram_.png)
 
 ## 5. MODULES OF THE SYSTEM
 
