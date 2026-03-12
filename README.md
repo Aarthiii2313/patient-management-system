@@ -49,10 +49,3 @@ Detailed project explanation:
 |------|
 | ![](screenshots/save.png) |
 
-
-
-## 🎥 Project Demo
-
-This video demonstrates the working flow of the Patient Management System including appointment booking, prescription management, and billing generation.
-
-▶️ [Watch Demo](Video/project-demo.mp4)
