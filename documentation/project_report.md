@@ -52,7 +52,8 @@ Consists of Salesforce custom objects for structured data storage:
 - `Billing__c`: Financial records and payment statuses.
 
 ### 4.4 Architecture Diagram
-![System Architecture Diagram](C:/Users/arthi/.gemini/antigravity/brain/a6849b3d-59b8-4840-a459-f196f4f6706c/architecture_diagram_1773295074722.png)
+## System Architecture
+![System Architecture](documentation/system-architecture.png)
 
 ## 5. MODULES OF THE SYSTEM
 
