@@ -33,7 +33,7 @@ Lightning Web Components (LWC) and Apex.
 
 Detailed project explanation:
 
-[Project Report](documentation/project-report.md)
+[Project Report](documentation/project_report.md)
 
 ## Project Screenshots
 
